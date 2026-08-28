@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Owner Dashboard</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">PRIVATE AREA</p>
+      <h1>Owner Dashboard</h1>
+    </div>
+    <a class="owner-link" href="./index.html">View Menu</a>
+  </header>
+  <main class="container">
+    <section id="loginPanel" class="panel narrow">
+      <h2>Owner login</h2>
+      <p>Demo password: <strong>0000</strong></p>
+      <label for="password">Password</label>
+      <input id="password" type="password" inputmode="numeric" autocomplete="current-password" placeholder="••••">
+      <button id="loginBtn" class="primary">Login</button>
+      <p id="loginStatus" class="status"></p>
+    </section>
+
+    <section id="dashboard" hidden>
+      <div class="toolbar">
+        <div><p class="eyebrow">MENU MANAGEMENT</p><h2>Products</h2></div>
+        <div class="toolbar-actions">
+          <button id="reloadBtn" class="secondary">Reload</button>
+          <button id="addBtn" class="primary">Add Product</button>
+        </div>
+      </div>
+
+      <section id="editor" class="panel" hidden>
+        <div class="editor-heading">
+          <div><p class="eyebrow" id="editorEyebrow">NEW PRODUCT</p><h3 id="editorTitle">Add Product</h3></div>
+          <button id="cancelBtn" class="ghost" type="button">Cancel</button>
+        </div>
+        <form id="productForm">
+          <input id="productId" type="hidden">
+          <div class="form-grid">
+            <div><label for="name">Product name</label><input id="name" required maxlength="100"></div>
+            <div><label for="price">Price</label><input id="price" type="number" min="0" step="0.01" required></div>
+            <div><label for="category">Category</label><input id="category" maxlength="60" placeholder="Coffee"></div>
+            <div><label for="active">Visible on menu</label><select id="active"><option value="true">Yes</option><option value="false">No</option></select></div>
+          </div>
+          <label for="description">Description</label>
+          <textarea id="description" maxlength="500"></textarea>
+          <label for="image">Product image</label>
+          <input id="image" type="file" accept="image/jpeg,image/png,image/webp">
+          <p id="imageHint" class="muted">Optional. The image will be committed into GitHub.</p>
+          <div class="editor-actions">
+            <button type="submit" class="primary">Save Product</button>
+            <button type="button" id="cancelBtn2" class="secondary">Cancel</button>
+          </div>
+        </form>
+      </section>
+
+      <div id="products" class="admin-list"></div>
+      <p id="adminStatus" class="status"></p>
+    </section>
+  </main>
+  <script src="./owner.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "cappuccino-1",
+      "name": "Cappuccino",
+      "price": 80,
+      "description": "Espresso with steamed milk and a light foam layer.",
+      "category": "Coffee",
+      "image": "https://placehold.co/800x600?text=Cappuccino",
+      "active": true
+    },
+    {
+      "id": "burger-1",
+      "name": "Classic Burger",
+      "price": 150,
+      "description": "Beef burger with lettuce, tomato and house sauce.",
+      "category": "Food",
+      "image": "https://placehold.co/800x600?text=Burger",
+      "active": true
+    }
+  ]
+}
