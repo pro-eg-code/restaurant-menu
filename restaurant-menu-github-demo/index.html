@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <p class="eyebrow">TODAY'S MENU</p>
+      <h1>Restaurant Menu</h1>
+    </div>
+    <a class="owner-link" href="./owner.html">Owner</a>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <span class="pill">Fresh • Simple • Delicious</span>
+      <h2>Choose something you love.</h2>
+      <p>The public menu reads its data from <code>menu.json</code>.</p>
+    </section>
+    <div id="status" class="status">Loading menu…</div>
+    <section id="menu" class="menu-grid" aria-live="polite"></section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
